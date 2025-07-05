@@ -1,0 +1,21 @@
+img {
+    width: 900px;
+    height: 500px;
+    border-radius: 10px;
+}
+
+#noite_dogtown {
+    filter: blur(3px);
+    filter: opacity(70%);
+}
+
+#viagem_nascer_sol {
+    filter: brightness(250%);
+    filter: contrast(150%);
+    filter: saturate(190%);
+}
+
+#dia_dogtown {
+    filter: drop-shadow(10px 18px 5px #072b22);
+    filter: grayscale(80%);
+}

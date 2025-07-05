@@ -1,0 +1,8 @@
+ol {
+    list-style: upper-roman;
+}
+
+ul{
+    list-style: square;
+    /* list-style-image: url(../imagens/code.png); */
+}
