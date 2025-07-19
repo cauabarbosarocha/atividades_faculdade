@@ -38,6 +38,8 @@ h1 {
     justify-content: space-around;
     /* outras opções de alinhamento: start, end, stretch, space-between, space-around, space-evenly, center */
     align-content: space-evenly;
+    justify-items: center;
+    align-items: center;
 }
 .box1 {
     background-color: var(--first-color);
