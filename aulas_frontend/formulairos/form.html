@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+</head>
+
+<body>
+    <form name="nome" id="identificador" method="post" action="endereço do script">
+        <!-- Aqui ficará o formulário -->
+        <fieldset>
+            <!-- Aqui ficará um conjunto de formulários (Não é obrigátorio, usado apenas para separar um conjunto de formulários) -->
+            <legend>Tipos de Formulários</legend> <!-- Título do conjunto de formulários -->
+            <label for="nome">Nome do Usuário: </label> <!-- Nome do campo -->
+            <input type="text" id="nome" name="nome">
+            <!-- Insere um campo de texto (É possível digitar qualquer caractere)-->
+            <br> <!-- Quebra de linha -->
+            <label for="data">Data de Nascimento: </label>
+            <input type="date" id="data" name="data">
+            <!-- Insere um campo de data (É possível selecionar uma data em um calendário)-->
+            <br>
+            <label for="hora">Hórario de Atendimento: </label>
+            <input type="time" id="hora" name="hora">
+            <!-- Insere um campo de hora (É possível selecionar uma hora em um relógio)-->
+            <br>
+            <label for="data-hora">Data e Hora de Viagem: </label>
+            <input type="datetime-local" id="data-hora" name="data-hora">
+            <!-- Insere um campo de data e hora (É possível selecionar uma data em um calendário e uma hora em um relógio)-->
+            <br>
+            <label for="mes">Mês de Entrega do projeto</label>
+            <input type="month" id="mes" name="mes">
+            <!-- Insere um campo para a digitação ou seleção de um determinado mês e ano (no FireFox não funciona) -->
+            <br>
+            <label for="semana">Semana de Férias</label>
+            <input type="week" id="semana" name="semana">
+            <!-- Insere um campo para digitação ou seleção de uma determinada semana do mês (no FireFox não funciona) -->
+            <br>
+            <label for="email">E-mail: </label>
+            <input type="email" id="email" name="email">
+            <!-- Insere um campo de e-mail (É possível digitar apenas caracteres válidos para e-mail) -->
+            <br>
+            <label for="senha">Senha: </label>
+            <input type="password" id="senha" name="senha">
+            <!-- Insere um campo de senha (Os caracteres digitados ficam ocultos)-->
+            <br>
+            <label for="url">URL do Site: </label>
+            <input type="url" id="url" name="url">
+            <!-- Insere um campo de URL (É possível digitar apenas caracteres válidos para URL) -->
+            <br>
+            <label for="busca">Pesquisar:</label>
+            <input type="search" id="busca" name="busca">
+            <!-- Insere um campo de busca (É possível digitar qualquer caractere) -->
+            <br>
+            <label for="numero">Número (1 a 10): </label>
+            <input type="number" id="numero" name="numero" min="1" max="10" step="1">
+            <!-- Insere um campo numérico (É possível digitar apenas números, com valor mínimo, máximo e incremento definidos) -->
+            <br>
+            <label for="som">Volume de Áudio: </label>
+            <input type="reange" name="som" id="som" min="0" max="100" step="10">
+            <!-- Insere um campo deslizante (É possível selecionar um valor dentro de um intervalo definido). Não funciona no FireFox -->
+            <br>
+            <label for="celular">Celular: </label>
+            <input type="tel" id="celular" name="celular">
+            <!-- Insere um campo de telefone (É possível digitar qualquer caractere, mas é recomendado digitar apenas números) -->
+            <br>
+            <label for="cor">Selecione uma Cor: </label>
+            <input type="color" id="cor" name="cor">
+            <!-- Insere um campo de seleção de cor -->
+        </fieldset>
+        <fieldset>
+            <legend>Radio</legend>
+            <!-- Insere um campo de seleção permitindo ao usuário selecionar apenas uma opção -->
+            <input type="radio" name="area" id="frontend" value="frontend">
+            <label for="frontend">Front-End</label>
+            <input type="radio" name="area" id="backend" value="backend">
+            <label for="backend">Back-End</label>
+            <input type="radio" name="area" id="fullstack" value="fullstack">
+            <label for="fullstack">Full-Stack</label>
+        </fieldset>
+        <fieldset>
+            <legend>CheckBox</legend>
+            <!-- Insere um campo de seleção permitindo ao usuário selecionar mais de uma opção -->
+            <input type="checkbox" name="curso" id="html" value="html">
+            <label for="html">HTML5</label>
+            <input type="checkbox" name="curso" id="css" value="css">
+            <label for="css">CSS3</label>
+            <input type="checkbox" name="curso" id="javascript" value="javascript">
+            <label for="javascript">JavaScript</label>
+        </fieldset>
+        <fieldset>
+            <legend>File</legend>
+            <!-- Permite a seleção de um arquivo (O envio só será concretizado coma utilização de alguma linguagem de programação) -->
+            <label for="arquivo">Selecione um Arquivo: </label>
+            <input type="file" id="aquivo" name="arquivo">
+        </fieldset>
+        <fieldset>
+            <legend>Campos de Seleção</legend>
+            <label for="area">Área de Atuação: </label>
+            <select id="area">
+                <option value="0">Selecione a sua opção</option>
+                <option value="frontend">Front-End</option>
+                <option value="backend">Back-End</option>
+                <option value="fullstack">Full-Stack</option>
+            </select>
+            <br>
+            <label for="jogos">Selecione ou digite seu jogo favorito: </label>
+            <input type="jogos" list="lista_jogos">
+            <datalist id="lista_jogos">
+                <option value="The Last of Us">
+                <option value="God of War">
+                <option value="Forza Horizon 5">
+                <option value="Minecraft">
+                <option value="Hades">
+                <option value="Cyberpunk 2077">
+            </datalist>
+        </fieldset>
+        <fieldset>
+            <legend>Textarea - Button</legend>
+            <label for="mensagem">Digite uma mensagem: </label>
+            <br>
+            <textarea name="mensagem" id="mensagem"></textarea>
+            <br>
+            <button type="submit">Enviar</button>
+            <!-- Assim que for pressionado, o navegador procurará o atributo action inserido na tag  form, ele vereficará para onde as informações deverão ser enviadas -->
+            <button type="reset">Limpar</button>
+            <!-- Assim que este botão for pressionado, todas as informações digitadas ou selecionadas serão apagadas -->
+            <button type="button">Chama JS</button>
+            <!-- Este botão não possui nenhuma função, a não ser se for associado a uma função em uma linguagem de programação -->
+        </fieldset>
+    </form>
+</body>
+
+</html>
