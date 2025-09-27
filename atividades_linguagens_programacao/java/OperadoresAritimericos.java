@@ -1,4 +1,4 @@
-package atividades_linguagens_programacao.java.operadores_aritimeticos;
+package atividades_linguagens_programacao.java;
 
 public class OperadoresAritimericos {
     public static void main(String[] args) {

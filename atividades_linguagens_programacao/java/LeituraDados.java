@@ -1,4 +1,4 @@
-package atividades_linguagens_programacao.java.entrada_de_dados;
+package atividades_linguagens_programacao.java;
 import java.util.Scanner;
 
 public class LeituraDados {
