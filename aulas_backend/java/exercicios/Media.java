@@ -1,4 +1,4 @@
-package atividades_linguagens_programacao.java.exercicios;
+package aulas_backend.java.exercicios;
 
 import java.util.Scanner;
 
