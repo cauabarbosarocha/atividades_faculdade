@@ -1,4 +1,4 @@
-package aulas_backend.java.exercicios;
+package aulas_backend.java;
 
 import java.util.Scanner;
 
