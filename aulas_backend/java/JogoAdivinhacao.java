@@ -21,7 +21,7 @@ public class JogoAdivinhacao {
             System.out.print("Digite seu palpite: ");
             int tentativa = scanner.nextInt();
             tentativas++;
-            
+
             // Validação da entrada
             if (tentativa < 1 || tentativa > 100) {
                 System.out.print("Por favor, difite um númeor entre 1 e 100.");
@@ -31,7 +31,8 @@ public class JogoAdivinhacao {
             // Validação da tetantiva
             if (tentativa == numeroSecreto) {
                 adivinhou = true;
-                System.out.println("Parabéns! Você adivinhou o número " + numeroSecreto + " em " + tentativas + " tentativas.");
+                System.out.println(
+                        "Parabéns! Você adivinhou o número " + numeroSecreto + " em " + tentativas + " tentativas.");
             } else if (tentativa < numeroSecreto) {
                 System.out.println("Tente um número maior.");
             } else {
