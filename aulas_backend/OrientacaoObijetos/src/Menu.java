@@ -53,6 +53,7 @@ public class Menu {
                     } else {
                         System.out.println("Nenhum personagem cadastrado ainda.");
                     }
+                    continue;
                 case 3:
                     // Entrada dos dados do item
                     System.out.println("Digite o nome do item:");
@@ -74,6 +75,7 @@ public class Menu {
                     } else {
                         System.out.println("Nenhum item cadastrado ainda.");
                     }
+                    continue;
                 case 0:
                     // Saída do programa
                     System.out.println("Finalizando o programa");
