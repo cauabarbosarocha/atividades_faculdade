@@ -1,15 +1,15 @@
 public class Item {
     // Atributos
-    String nome;
-    String descricao;
+    String nomeItem;
+    String descricaoItem;
     boolean raro;
-    int nivelPoder;
+    int nivelPoderItem;
 
     // Construtor
-    public Item(String nome, String descricao, boolean raro, int nivelPoder) {
-        this.nome = nome;
-        this.descricao = descricao;
+    public Item(String nomeItem, String descricaoItem, boolean raro, int nivelPoderItem) {
+        this.nomeItem = nomeItem;
+        this.descricaoItem = descricaoItem;
         this.raro = raro;
-        this.nivelPoder = nivelPoder;
+        this.nivelPoderItem = nivelPoderItem;
     }
 }

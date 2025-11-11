@@ -4,6 +4,10 @@ public class PersonagemMagico {
     String poderMagico;
     int nivelMana;
 
+    // Objetos
+    HabilidadeEspecial habilidade;
+    Item item;
+
     // Construtor
     public PersonagemMagico(String nome, String poderMagico, int nivelMana) {
         this.nome = nome;
