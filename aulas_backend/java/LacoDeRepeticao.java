@@ -14,5 +14,9 @@ public class LacoDeRepeticao {
             System.out.println("Contagem do do-while: " + numeroDoWhile);
             numeroDoWhile++;
         } while (numeroDoWhile <= 10);
+        // Exemplo de for
+        for (int numeroFor = 1; numeroFor <= 10; numeroFor++) {
+            System.out.println("Contagem do for: " + numeroFor);
+        }
     }
 }
