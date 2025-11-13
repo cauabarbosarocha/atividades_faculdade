@@ -8,15 +8,16 @@ public class Menu {
         PersonagemMagico personagem = null;
         HabilidadeEspecial habilidade = null;
         Item item = null;
+
         // Declaração de variáveis
-        int op, nivelMana, custoMana, nivelPoder;
-        String nome, poderMagico, nomeHabilidade, nomeItem, descricaoItem;
+        int op, nivelMana, custoMana, nivelPoder, qtd, nivelAtual;
+        String nome, poderMagico, nomeHabilidade, nomeItem, descricaoItem, ataque;
         boolean habilitada, raro;
 
         // Loop do menu
         do {
             System.out.println(
-                    "Escolha uma opção: \n1. Personagem \n2. Exibir Personagem \n3. Itens \n4. Exibir item \n0. Sair");
+                    "Escolha uma opção: \n1. Personagem \n2. Exibir Personagem \n3. Itens \n4. Exibir item \n5. Atacar \n6. Aumentar a Mana \n7. Ativar Habilidade Especial \n0. Sair");
             op = sc.nextInt();
 
             // Processamento da opção escolhida
@@ -41,6 +42,7 @@ public class Menu {
                     habilitada = sc.nextBoolean();
                     // Atribuição dos valores ao objeto da habilidade
                     habilidade = new HabilidadeEspecial(nomeHabilidade, custoMana, habilitada);
+                    personagem.habilidade = habilidade;
                     break;
                 case 2:
                     // Exibição dos dados do personagem
@@ -76,6 +78,21 @@ public class Menu {
                         System.out.println("Nenhum item cadastrado ainda.");
                     }
                     continue;
+                case 5:
+                    // Realiza o ataque do personagem
+                    System.out.println("Digite o nome do ataque:");
+                    ataque = sc.next() + sc.nextLine();
+                    personagem.atacar(ataque);
+                    break;
+                case 6:
+                    System.out.println("Digite a quantidade de energia:");
+                    qtd = sc.nextInt();
+                    nivelAtual = personagem.aumentarMana(qtd);
+                    System.out.printf("Nivel atual de energia: %d", nivelAtual);
+                    break;
+                case 7:
+                    personagem.ativarHabilidadeEspecial();
+                    break;
                 case 0:
                     // Saída do programa
                     System.out.println("Finalizando o programa");
