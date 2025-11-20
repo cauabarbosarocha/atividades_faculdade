@@ -35,15 +35,55 @@ public class PersonagemMagico {
     }
 
     public void ativarHabilidadeEspecial() {
-        if (!habilidade.habilitada) {
+        if (!habilidade.isHabilitada()) {
             System.out.println("Habilidade especial não está ativa. Ativando a habilidade");
-            habilidade.habilitada = true;
-            System.out.printf("Hbilidade %s agora está ativa%n", habilidade.nomeHabilidade);
-        } else if (nivelMana >= habilidade.custoMana) {
-            System.out.printf("Ativando a Habilidade: %s%n", habilidade.nomeHabilidade);
-            nivelMana -= habilidade.custoMana;
+            habilidade.setHabilitada(true);
+            System.out.printf("Habilidade %s agora está ativa%n", habilidade.getNomeHabilidade());
+        } else if (nivelMana >= habilidade.getCustoMana()) {
+            System.out.printf("Ativando a Habilidade: %s%n", habilidade.getNomeHabilidade());
+            nivelMana -= habilidade.getCustoMana();
         } else {
             System.out.printf("%s está sem energia para a habilidade especial", nome);
         }
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getPoderMagico() {
+        return poderMagico;
+    }
+
+    public void setPoderMagico(String poderMagico) {
+        this.poderMagico = poderMagico;
+    }
+
+    public int getNivelMana() {
+        return nivelMana;
+    }
+
+    public void setNivelMana(int nivelMana) {
+        this.nivelMana = nivelMana;
+    }
+
+    public HabilidadeEspecial getHabilidadeEspecial() {
+        return habilidade;
+    }
+
+    public void setHabilidadeEspecial(HabilidadeEspecial habilidade) {
+        this.habilidade = habilidade;
+    }
+
+    public Item getItem() {
+        return item;
+    }
+
+    public void setItem(Item item) {
+        this.item = item;
     }
 }

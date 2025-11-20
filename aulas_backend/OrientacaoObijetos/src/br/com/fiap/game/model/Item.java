@@ -13,4 +13,36 @@ public class Item {
         this.raro = raro;
         this.nivelPoderItem = nivelPoderItem;
     }
+
+    public String getNomeItem() {
+        return nomeItem;
+    }
+
+    public void setNomeItem(String nomeItem) {
+        this.nomeItem = nomeItem;
+    }
+
+    public String getDescricaoItem() {
+        return descricaoItem;
+    }
+
+    public void setDescricaoItem(String descricaoItem) {
+        this.descricaoItem = descricaoItem;
+    }
+
+    public boolean isRaro() {
+        return raro;
+    }
+
+    public void setRaro(boolean raro) {
+        this.raro = raro;
+    }
+
+    public int getNivelPoderItem() {
+        return nivelPoderItem;
+    }
+
+    public void setNivelPoderItem(int nivelPoderItem) {
+        this.nivelPoderItem = nivelPoderItem;
+    }
 }

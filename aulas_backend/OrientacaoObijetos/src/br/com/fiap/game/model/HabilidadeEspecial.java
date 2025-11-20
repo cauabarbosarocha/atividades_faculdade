@@ -11,4 +11,28 @@ public class HabilidadeEspecial {
         this.custoMana = custoMana;
         this.habilitada = habilitada;
     }
+
+    public String getNomeHabilidade() {
+        return nomeHabilidade;
+    }
+
+    public void setNomeHabilidade(String nomeHabilidade) {
+        this.nomeHabilidade = nomeHabilidade;
+    }
+
+    public int getCustoMana() {
+        return custoMana;
+    }
+
+    public void setCustoMana(int custoMana) {
+        this.custoMana = custoMana;
+    }
+
+    public boolean isHabilitada() {
+        return habilitada;
+    }
+
+    public void setHabilitada(boolean habilitada) {
+        this.habilitada = habilitada;
+    }
 }

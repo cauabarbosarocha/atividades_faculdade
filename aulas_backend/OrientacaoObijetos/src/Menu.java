@@ -46,15 +46,18 @@ public class Menu {
                     habilitada = sc.nextBoolean();
                     // Atribuição dos valores ao objeto da habilidade
                     habilidade = new HabilidadeEspecial(nomeHabilidade, custoMana, habilitada);
-                    personagem.habilidade = habilidade;
+                    // atribui a habilidade ao personagem criado
+                    if (personagem != null) {
+                        personagem.setHabilidadeEspecial(habilidade);
+                    }
                     break;
                 case 2:
                     // Exibição dos dados do personagem
                     if (personagem != null && habilidade != null) {
                         System.out.printf(
                                 "Nome: %s%nPoder Mágico: %s%nNível de Mana: %d%nNome da Habilidade: %s%nCusto de mana: %d%nHabilidade ativa: %b%n",
-                                personagem.nome, personagem.poderMagico, personagem.nivelMana,
-                                habilidade.nomeHabilidade, habilidade.custoMana, habilidade.habilitada);
+                                personagem.getNome(), personagem.getPoderMagico(), personagem.getNivelMana(),
+                                habilidade.getNomeHabilidade(), habilidade.getCustoMana(), habilidade.isHabilitada());
                         break;
                     } else {
                         System.out.println("Nenhum personagem cadastrado ainda.");
@@ -76,8 +79,8 @@ public class Menu {
                 case 4:
                     // Exibição dos dados do item
                     if (item != null) {
-                        System.out.printf("Nome: %s%nDescrição: %s%nRaro: %b%nNível de Poder: %d%n", item.nomeItem,
-                                item.descricaoItem, item.raro, item.nivelPoderItem);
+                        System.out.printf("Nome: %s%nDescrição: %s%nRaro: %b%nNível de Poder: %d%n", item.getNomeItem(),
+                                item.getDescricaoItem(), item.isRaro(), item.getNivelPoderItem());
                     } else {
                         System.out.println("Nenhum item cadastrado ainda.");
                     }
