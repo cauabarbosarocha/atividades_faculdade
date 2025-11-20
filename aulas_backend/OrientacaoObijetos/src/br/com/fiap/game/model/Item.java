@@ -1,9 +1,10 @@
+package br.com.fiap.game.model;
 public class Item {
     // Atributos
-    String nomeItem;
-    String descricaoItem;
-    boolean raro;
-    int nivelPoderItem;
+    private String nomeItem;
+    private String descricaoItem;
+    private boolean raro;
+    private int nivelPoderItem;
 
     // Construtor
     public Item(String nomeItem, String descricaoItem, boolean raro, int nivelPoderItem) {

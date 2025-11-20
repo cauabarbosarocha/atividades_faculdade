@@ -1,3 +1,7 @@
+import br.com.fiap.game.model.HabilidadeEspecial;
+import br.com.fiap.game.model.Item;
+import br.com.fiap.game.model.PersonagemMagico;
+
 import java.util.Scanner;
 
 public class Menu {

@@ -1,8 +1,9 @@
+package br.com.fiap.game.model;
 public class HabilidadeEspecial {
     // Atributos
-    String nomeHabilidade;
-    int custoMana;
-    boolean habilitada;
+    private String nomeHabilidade;
+    private int custoMana;
+    private boolean habilitada;
 
     // Construtor
     public HabilidadeEspecial(String nomeHabilidade, int custoMana, boolean habilitada){

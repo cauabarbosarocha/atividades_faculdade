@@ -1,12 +1,16 @@
+package br.com.fiap.game.model;
+import br.com.fiap.game.model.HabilidadeEspecial;
+import br.com.fiap.game.model.Item;
+
 public class PersonagemMagico {
     // Atributos
-    String nome;
-    String poderMagico;
-    int nivelMana;
+    private String nome;
+    private String poderMagico; 
+    private int nivelMana;
 
     // Objetos
-    HabilidadeEspecial habilidade;
-    Item item;
+    private HabilidadeEspecial habilidade;
+    private Item item;
 
     // Construtor
     public PersonagemMagico(String nome, String poderMagico, int nivelMana) {
