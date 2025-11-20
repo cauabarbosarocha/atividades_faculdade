@@ -22,11 +22,11 @@ public class PersonagemMagico {
 
     // Métodos
     public void atacar(String ataque) {
-        if (nivelMana >= 10) {
+        if (nivelMana >= habilidade.getCustoMana()) {
             System.out.printf("%s realizou um ataque: %s!%n", nome, ataque);
-            nivelMana -= 10;
+            nivelMana -= habilidade.getCustoMana();
         } else {
-            System.out.printf("%s está sem energia para atacar.", nome);
+            System.out.printf("%s está sem energia para atacar.%n", nome);
         }
     }
 
@@ -37,14 +37,14 @@ public class PersonagemMagico {
 
     public void ativarHabilidadeEspecial() {
         if (!habilidade.isHabilitada()) {
-            System.out.println("Habilidade especial não está ativa. Ativando a habilidade");
+            System.out.println("Habilidade especial não está ativa. Ativando a habilidade%n");
             habilidade.setHabilitada(true);
             System.out.printf("Habilidade %s agora está ativa%n", habilidade.getNomeHabilidade());
         } else if (nivelMana >= habilidade.getCustoMana()) {
             System.out.printf("Ativando a Habilidade: %s%n", habilidade.getNomeHabilidade());
             nivelMana -= habilidade.getCustoMana();
         } else {
-            System.out.printf("%s está sem energia para a habilidade especial", nome);
+            System.out.printf("%s está sem energia para a habilidade especial%n", nome);
         }
     }
 
