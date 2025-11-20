@@ -1,4 +1,5 @@
 package br.com.fiap.game.model;
+
 public class Item {
     // Atributos
     private String nomeItem;

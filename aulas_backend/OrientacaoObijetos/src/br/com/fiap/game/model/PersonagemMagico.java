@@ -1,11 +1,12 @@
 package br.com.fiap.game.model;
-import br.com.fiap.game.model.HabilidadeEspecial;
-import br.com.fiap.game.model.Item;
+
+// import br.com.fiap.game.model.HabilidadeEspecial;
+// import br.com.fiap.game.model.Item;
 
 public class PersonagemMagico {
     // Atributos
     private String nome;
-    private String poderMagico; 
+    private String poderMagico;
     private int nivelMana;
 
     // Objetos
@@ -29,7 +30,7 @@ public class PersonagemMagico {
         }
     }
 
-    public int aumentarMana(int mana){
+    public int aumentarMana(int mana) {
         nivelMana = nivelMana + mana;
         return nivelMana;
     }
