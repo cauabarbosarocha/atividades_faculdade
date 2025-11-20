@@ -46,10 +46,7 @@ public class Menu {
                     habilitada = sc.nextBoolean();
                     // Atribuição dos valores ao objeto da habilidade
                     habilidade = new HabilidadeEspecial(nomeHabilidade, custoMana, habilitada);
-                    // atribui a habilidade ao personagem criado
-                    if (personagem != null) {
-                        personagem.setHabilidadeEspecial(habilidade);
-                    }
+                    personagem.setHabilidadeEspecial(habilidade);
                     break;
                 case 2:
                     // Exibição dos dados do personagem
