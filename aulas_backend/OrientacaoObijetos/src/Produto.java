@@ -24,6 +24,20 @@ public class Produto {
         this.nome = nome;
     }
 
-    public s
+    public String getIngredientes() {
+        return ingredientes;
+    }
+
+    public void setIngredientes(String ingredientes){
+        this.ingredientes = ingredientes;
+    }
+
+    public double getPreco() {
+        return preco;
+    }
+
+    public void setPreco(double preco) {
+        this.preco = preco;
+    }
 
 }
