@@ -11,7 +11,8 @@ public class Gerente extends Funcionario {
         super();
     }
 
-    public Gerente(String nome, String cpf, Endereco endereco, double salarioFixo, int sala, int ramal, double faturamentoSemestral) {
+    public Gerente(String nome, String cpf, Endereco endereco, double salarioFixo, int sala, int ramal,
+            double faturamentoSemestral) {
         super(nome, cpf, endereco, salarioFixo);
         this.sala = sala;
         this.ramal = ramal;
@@ -47,7 +48,7 @@ public class Gerente extends Funcionario {
     public double getBonus() {
         return this.faturamentoSemestral * 0.05;
     }
-    
+
     @Override
     public String getDetalhamento() {
         return "Nome: " + this.getNome() + "\n"
@@ -57,6 +58,6 @@ public class Gerente extends Funcionario {
                 + "Salario mensal: " + this.getSalarioFixo() + "\n"
                 + "Faturamento Semestral: " + this.getFaturamentoSemestral() + "\n"
                 + "Bonus: " + this.getBonus() + "\n";
-            }
+    }
 
 }

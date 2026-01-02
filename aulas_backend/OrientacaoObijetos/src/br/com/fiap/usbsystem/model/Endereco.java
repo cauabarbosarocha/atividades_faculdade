@@ -10,11 +10,14 @@ public class Endereco {
     private String estado;
 
     // Contrutor
+    public Endereco() {
+    }
+
     public Endereco(String logradouro, int numero, String complemento, int cep, String cidade, String estado) {
         this.logradouro = logradouro;
         this.numero = numero;
         this.complemento = complemento;
-        this.cep = cep;
+        this.cep = cep; 
         this.cidade = cidade;
         this.estado = estado;
     }
@@ -24,8 +27,8 @@ public class Endereco {
         return logradouro;
     }
 
-    public void setLogradouro(String locradouro) {
-        this.logradouro = locradouro;
+    public void setLogradouro(String logradouro) {
+        this.logradouro = logradouro;
     }
 
     public int getNumero() {

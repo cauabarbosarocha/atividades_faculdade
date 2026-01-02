@@ -36,5 +36,5 @@ public class Programador extends Funcionario {
                 + "Salario mensal: " + this.getSalarioFixo() + "\n"
                 + "Bonus: " + this.getBonus() + "\n";
     }
-    
+
 }
