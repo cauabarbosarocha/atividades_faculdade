@@ -73,7 +73,7 @@ public class Endereco {
 
     // Método toString
     public String getEnderecoCompleto() {
-        return this.logradouro + ","
+        return this.logradouro + ", "
                 + this.numero + ", "
                 + this.complemento + ", "
                 + this.cidade + " - "
