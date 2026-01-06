@@ -3,7 +3,7 @@ import java.util.Scanner;
 import br.com.fiap.loja.model.Produto;
 
 
-public class Main {
+public class Polimorfismo {
     public static void main(String[] args) {
         // Cria um objeto para leitura de dados
         Scanner sc = new Scanner(System.in);
