@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinTake - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">FinTake</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Transferências</a></li>
+                <li><a href="#">Pagar</a></li>
+                <li><a href="#">Contas</a></li>
+                <li><a href="#">Perfil</a></li>
+            </ul>
+        </nav>
+        <div class="user-profile">
+            <i class="fa-regular fa-bell icon-bell"></i>
+            <img src="https://via.placeholder.com/35" alt="Foto do Usuário" class="avatar">
+        </div>
+    </header>
+
+    <main class="dashboard-container">
+        
+        <section class="column-left">
+            <article class="card balance-card">
+                <h2>Saldo Total Atual</h2>
+                <p class="balance-value">R$ 12.450,00</p>
+                <div class="balance-actions">
+                    <button class="action-btn">
+                        <i class="fa-brands fa-pix"></i>
+                        <span>PIX</span>
+                    </button>
+                    <button class="action-btn">
+                        <i class="fa-solid fa-money-bill-transfer"></i>
+                        <span>Transferir</span>
+                    </button>
+                    <button class="action-btn">
+                        <i class="fa-solid fa-barcode"></i>
+                        <span>Pagar Contas</span>
+                    </button>
+                </div>
+            </article>
+
+            <article class="card chart-card">
+                <h3>Evolução do Saldo</h3>
+                <div class="chart-area">
+                    <svg viewBox="0 0 100 40" class="line-chart">
+                        <path d="M0,35 Q10,30 20,35 T40,25 T60,20 T80,10 T100,5" fill="none" stroke="#10b981" stroke-width="2"/>
+                        <circle cx="100" cy="5" r="2" fill="#10b981"/>
+                    </svg>
+                    <div class="chart-labels">
+                        <span>Jan</span><span>Fev</span><span>Mar</span><span>Abr</span><span>Mai</span><span>Jun</span>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section class="column-right">
+            <article class="card list-card">
+                <h3>Últimas Movimentações</h3>
+                <ul class="transaction-list">
+                    <li class="transaction-item">
+                        <div class="trans-details">
+                            <div class="icon-box"><i class="fa-solid fa-arrow-right"></i></div>
+                            <div class="trans-text">
+                                <strong>Famineso</strong>
+                                <span>Conta</span>
+                            </div>
+                        </div>
+                        <span class="badge badge-green">PIX</span>
+                        <span class="trans-value positive">+ R$ 12.450,00</span>
+                    </li>
+                    <li class="transaction-item">
+                        <div class="trans-details">
+                            <div class="icon-box"><i class="fa-solid fa-link"></i></div>
+                            <div class="trans-text">
+                                <strong>Aries</strong>
+                                <span>Transferência</span>
+                            </div>
+                        </div>
+                        <span class="badge badge-red">TED</span>
+                        <span class="trans-value negative">- R$ 5.570,00</span>
+                    </li>
+                </ul>
+            </article>
+
+            <article class="card list-card">
+                <h3>Minhas Contas</h3>
+                <ul class="transaction-list">
+                    <li class="transaction-item">
+                        <div class="trans-details">
+                            <div class="icon-box"><i class="fa-solid fa-building-columns"></i></div>
+                            <div class="trans-text">
+                                <strong>Famineso</strong>
+                                <span>Conta</span>
+                            </div>
+                        </div>
+                        <span class="badge badge-green">PIX</span>
+                        <span class="trans-value positive">+ R$ 1.230,00</span>
+                    </li>
+                    <li class="transaction-item">
+                        <div class="trans-details">
+                            <div class="icon-box"><i class="fa-solid fa-basket-shopping"></i></div>
+                            <div class="trans-text">
+                                <strong>Lazer</strong>
+                                <span>Alimentação</span>
+                            </div>
+                        </div>
+                        <span class="badge badge-red">TED</span>
+                        <span class="trans-value negative">- R$ 5.370,00</span>
+                    </li>
+                </ul>
+            </article>
+        </section>
+    </main>
+
+</body>
+</html>
