@@ -47,7 +47,7 @@ public class Polimorfismo {
             default:
                 System.out.println("Opção inválida");
                 break;
-        };
+        }
         sc.close(); // Fecha o scanner
     }
 }
