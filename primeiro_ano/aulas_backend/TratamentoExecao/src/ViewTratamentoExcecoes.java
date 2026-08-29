@@ -37,14 +37,16 @@ public class ViewTratamentoExcecoes {
                     System.out.println("A nota da " + posicao + "º avaliação é " + notas[posicao - 1]);
                 }
             }
-            // exibe a média do aluno e finaliza o scanner
+            // exibe a média do aluno
             System.out.println("A média do aluno é " + somaNotas / notas.length);
-            ler.close();
+
         // Exibe uma mensagem para cada tipo de erro
         } catch (InputMismatchException error) {
             System.out.println("Foi digitado um valor inválido");
         } catch (ArrayIndexOutOfBoundsException error) {
             System.out.println("O número da avaliação não existe.");
+        } finally {
+            ler.close();
         }
 
         // exibe uma mensagem de finalização
