@@ -1,6 +1,7 @@
 // Import para leitura de dados
 import java.util.Scanner;
 // Import das classes para cadastro
+import br.com.fiap.empresa.model.Funcionario;
 import br.com.fiap.usbsystem.model.Endereco;
 import br.com.fiap.usbsystem.model.Programador;
 
@@ -84,4 +85,21 @@ public class ViewProgramador {
         scanner.close();
     }
 
+    public static class FuncionarioView {
+        public static void main(String[] args) {
+            Scanner sc = new Scanner(System.in);
+            Funcionario fun = new Funcionario("Thiago", 1481);
+
+            try {
+                System.out.println("Qual o percentual para o aumento do salário?");
+                int per = sc.nextInt();
+                fun.aumentarSalario(per);
+                System.out.println("Novo salário: " + fun.getSalario());
+            } catch (Exception e) {
+                System.err.println(e.getMessage());
+            } finally {
+                sc.close();
+            }
+        }
+    }
 }
