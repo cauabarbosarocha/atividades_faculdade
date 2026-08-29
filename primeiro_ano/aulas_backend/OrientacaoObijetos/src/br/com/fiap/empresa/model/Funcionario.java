@@ -1,17 +1,20 @@
 package br.com.fiap.empresa.model;
 
+import br.com.fiap.empresa.model.PercentualInvalidoException;
+
 public class Funcionario {
     private String nome;
     private double salario;
-    public void aumentarSalario(int percentual) throws Exception {
+    public void aumentarSalario(int percentual) throws PercentualInvalidoException {
         if (percentual < 0) {
-            throw new Exception("O valor percentual deve ser positivo");
+            throw new PercentualInvalidoException("O valor percentual deve ser positivo");
         }
         salario += salario * percentual / 100;
     }
 
     public Funcionario() {}
-    public  Funcionario(String nome, double salario) {
+
+    public Funcionario(String nome, double salario) {
         this.nome = nome;
         this.salario = salario;
     }

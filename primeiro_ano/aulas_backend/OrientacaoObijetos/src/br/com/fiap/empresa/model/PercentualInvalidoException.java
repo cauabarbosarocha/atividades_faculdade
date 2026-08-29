@@ -1,9 +1,10 @@
 package br.com.fiap.empresa.model;
 
-public class PercentualInvalidoException {
+public class PercentualInvalidoException extends Exception {
+
     public PercentualInvalidoException() {}
 
     public PercentualInvalidoException(String message) {
-        super(message);
+     super(message);
     }
 }
