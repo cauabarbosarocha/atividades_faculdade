@@ -1,41 +1,44 @@
 package br.com.fiap.fintech.model;
 
 public class Transacao {
-    // Declaração dos atributos privados da transação (encapsulamento)
-    private Integer idTransacao;
     private String tipoTransacao;
-    private Double valor;
+    private double valor;
     private String dataTransacao;
 
-    // Construtor padrão (sem parâmetros) exigido pela atividade
-    public Transacao() {
-    }
-
-    // Construtor com parâmetros para inicializar os atributos ao instanciar o objeto
-    public Transacao(Integer idTransacao, String tipoTransacao, Double valor, String dataTransacao) {
-        this.idTransacao = idTransacao;
+    // Construtor para inicializar os dados da transação
+    public Transacao(String tipoTransacao, double valor, String dataTransacao) {
         this.tipoTransacao = tipoTransacao;
         this.valor = valor;
         this.dataTransacao = dataTransacao;
     }
 
-    // Método correspondente ao UC02: Registra uma transação manual no sistema
+    // Método para registrar transação manual
     public void registrarTransacaoManual() {
-        System.out.println("Executando o método registrarTransacaoManual para o ID: " + idTransacao);
+        System.out.println("Executando método registrarTransacaoManual para ID: " + tipoTransacao);
     }
 
-    // Método correspondente ao UC03: Importa o extrato bancário
+    // Método para importar extrato bancário
     public void importarExtratoBancario() {
-        System.out.println("Executando o método importarExtratoBancario.");
+        System.out.println("Executando método importarExtratoBancario");
     }
 
-    // Método correspondente ao UC04: Sincroniza a fatura do cartão
-    public void sincronizarFaturaCartao() {
-        System.out.println("Executando o método sincronizarFaturaCartao.");
+    // Método para sincronizar extrato de cartão
+    public void sincronizarExtratoCartao() {
+        System.out.println("Executando método sincronizarExtratoCartao");
     }
 
-    // Método correspondente ao UC05: Realiza a conversão de moeda estrangeira recebendo a taxa
-    public void converterMoedaEstrangeira(Double taxaConversao) {
-        System.out.println("Executando o método converterMoedaEstrangeira com taxa: " + taxaConversao);
+    // Método para converter moeda estrangeira com base em uma taxa
+    public void converterMoedaEstrangeira(double taxaConversao) {
+        System.out.println("Executando método converterMoedaEstrangeira com taxa: " + taxaConversao);
     }
+
+    // Getters e Setters
+    public String getTipoTransacao() { return tipoTransacao; }
+    public void setTipoTransacao(String tipoTransacao) { this.tipoTransacao = tipoTransacao; }
+
+    public double getValor() { return valor; }
+    public void setValor(double valor) { this.valor = valor; }
+
+    public String getDataTransacao() { return dataTransacao; }
+    public void setDataTransacao(String dataTransacao) { this.dataTransacao = dataTransacao; }
 }

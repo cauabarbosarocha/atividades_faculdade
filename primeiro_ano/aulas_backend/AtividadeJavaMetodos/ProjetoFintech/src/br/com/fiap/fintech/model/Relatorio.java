@@ -1,24 +1,29 @@
 package br.com.fiap.fintech.model;
 
 public class Relatorio {
-    // Atributos privados para controle do relatório financeiro
-    private Integer idRelatorio;
+    private String dataRelatorio;
     private String periodo;
-    private Double totalGastos;
+    private double totalGastos;
 
-    // Construtor padrão
-    public Relatorio() {
-    }
-
-    // Construtor com parâmetros
-    public Relatorio(Integer idRelatorio, String periodo, Double totalGastos) {
-        this.idRelatorio = idRelatorio;
+    // Construtor da classe Relatorio
+    public Relatorio(String dataRelatorio, String periodo, double totalGastos) {
+        this.dataRelatorio = dataRelatorio;
         this.periodo = periodo;
         this.totalGastos = totalGastos;
     }
 
-    // Método correspondente ao UC06: Gera o relatório detalhado de gastos
-    public void gerarRelatorioGastos() {
-        System.out.println("Executando o método gerarRelatorioGastos para o período: " + periodo);
+    // Método para gerar o relatório detalhado de gastos
+    public void gerarRelatorioDetalhado() {
+        System.out.println("Executando método gerarRelatorioDetalhado para o período: " + periodo);
     }
+
+    // Getters e Setters
+    public String getDataRelatorio() { return dataRelatorio; }
+    public void setDataRelatorio(String dataRelatorio) { this.dataRelatorio = dataRelatorio; }
+
+    public String getPeriodo() { return periodo; }
+    public void setPeriodo(String periodo) { this.periodo = periodo; }
+
+    public double getTotalGastos() { return totalGastos; }
+    public void setTotalGastos(double totalGastos) { this.totalGastos = totalGastos; }
 }
