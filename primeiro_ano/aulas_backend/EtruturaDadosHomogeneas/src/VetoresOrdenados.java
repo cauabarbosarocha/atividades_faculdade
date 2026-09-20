@@ -24,5 +24,29 @@ public class VetoresOrdenados  {
         }
 
         IO.println("-------------------------------------------");
+        // Busca Binaria
+        int elementoProcurado = 23;
+        int inicio = 0;
+        int fim = bubbleSort.length - 1;
+        int posicaoencontrada = -1; // Assume inicialmente que o elemento não está presente
+
+        while (inicio <= fim) {
+            int meio = inicio + (fim - inicio) / 2;
+
+            if (bubbleSort[meio] == elementoProcurado) {
+                posicaoencontrada = meio; // Elemento encontrado
+                break;
+            } else if (bubbleSort[meio] < elementoProcurado) {
+                inicio = meio + 1; // Continua a busca na metade superior
+            } else {
+                fim = meio - 1; // Continua a busca na metade inferior
+            }
+        }
+
+        if (posicaoencontrada != -1) {
+            System.out.println("Elemento encontrado no índice: " + posicaoencontrada);
+        } else {
+            System.out.println("Elemento não encontrado no vetor");
+        }
     }
 }
