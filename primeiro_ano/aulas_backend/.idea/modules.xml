@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/EtruturaDadosHomogeneas/EtruturaDadosHomogeneas.iml" filepath="$PROJECT_DIR$/EtruturaDadosHomogeneas/EtruturaDadosHomogeneas.iml" />
       <module fileurl="file://$PROJECT_DIR$/TratamentoExecao/TratamentoExecao.iml" filepath="$PROJECT_DIR$/TratamentoExecao/TratamentoExecao.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/aulas_backend.iml" filepath="$PROJECT_DIR$/.idea/aulas_backend.iml" />
     </modules>
